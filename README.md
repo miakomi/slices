@@ -19,7 +19,7 @@ go mod tidy
 
 ### Reverse you array or slice 
 ```golang
-slice := []int{123}
+slice := []int{1,2,3}
 slice2 := arrays.Reverse(slice)
-fmt.Println(slice2) //output [1 2 3]
+fmt.Println(slice2) //output [3 2 1]
 ```
