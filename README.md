@@ -13,17 +13,9 @@ Arrays tools is a module written in Golang that facilitates working with arrays 
 ### Install ArrayTools
 ```
 go mod init * 
-go get -u github.com/Miakomi/arrays
+go get -u github.com/miakomi/arrays
 go mod tidy
 ```
-Warning! If you get error
-```
-module declares its path as: github.com/miakomi/arrays
-                but was required as: github.com/Miakomi/arrays
-```
-try specifying the path when go get how `github.com/miakomi/arrays`
-
-
 
 ### Reverse you array or slice 
 ```golang
