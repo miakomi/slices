@@ -1,3 +1,3 @@
-module github.com/miakomi/arrays
+module github.com/Miakomi/arrays
 
 go 1.18
