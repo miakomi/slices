@@ -4,5 +4,6 @@ Arrays tools is a module written in Golang that facilitates working with arrays 
 
 _List of features_:
 
-    -Reverse arrays and slices
-    -to be continue...
+•Reverse arrays and slices
+
+•to be continue...
