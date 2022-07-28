@@ -1,18 +1,17 @@
 package arrays
 
-func Sort(a []int) []int {
-  left := 0
-  right := len(a)-1
-  temp := 0
-  
-  for left < right {
-    temp = a[left]
-    a[left] = a[right]
-    a[right] = temp
+func Reverse(a []int) []int {
+	left := 0
+	right := len(a) - 1
+	temp := 0
 
-    left ++
-    right --
-  }
-  return a
+	for left < right {
+		temp = a[left]
+		a[left] = a[right]
+		a[right] = temp
+
+		left++
+		right--
+	}
+	return a
 }
-
