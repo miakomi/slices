@@ -12,7 +12,7 @@ Arrays tools is a module written in Golang that facilitates working with arrays 
 
 ### Install ArrayTools
 ```
-go mod init 
+go mod init * 
 go get -u github.com/Miakomi/arrays
 go mod tidy
 ```
