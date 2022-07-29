@@ -1,6 +1,6 @@
-package arrays
+package slices
 
-func ReverseSlice(a []int) []int{
+func Reverse(a []int) []int{
 	left := 0
 	right := len(a) -1
 
