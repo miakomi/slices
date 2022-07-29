@@ -20,7 +20,7 @@ go mod tidy
 ```
 
 ### Search the index of a numbers in a []int slice
-_use only the sorted slice (sort.Ints(slice) on package slice_
+_use only the sorted slice (sort.Ints(slice) on package slice)_
 ```go
 slice := []int{1, 3, 8, 16, 56}
 res := slices.SearchInt(slice, 56) //output Ok, i(index) = 4
@@ -33,12 +33,15 @@ res := slices.SearchFloat32(slice, 56.8) //output Ok, i(index) = 4
 res = slices.SearchFloat32(slice, 56.7) // output NO
 ```
 
+
+
 ### Reverse slice 
 ```go 
 slice := []int{1, 2, 3}
 slices.ReverseSlice(slice)
 fmt.Println(slice) //output [3 2 1]
 ```
+
 #### or float slice.. 
 ```go 
 arr := []float32{1.1, 2.2, 3.3}
