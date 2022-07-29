@@ -17,9 +17,15 @@ go get -u github.com/miakomi/arrays
 go mod tidy
 ```
 
-### Reverse you array or slice 
+### Reverse you slice 
 ```go
 slice := []int{1,2,3}
-slice2 := arrays.Reverse(slice)
+slice2 := arrays.ReverseSlice(slice)
 fmt.Println(slice2) //output [3 2 1]
+```
+or without return slice
+```go 
+slice := []int{1, 2, 3}
+arrays.ReverseSlice(slice)
+fmt.Println(slice) //output [3 2 1]
 ```

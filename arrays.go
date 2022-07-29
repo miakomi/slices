@@ -1,15 +1,11 @@
 package arrays
 
-func Reverse(a []int) []int {
+func ReverseSlice(a []int) []int{
 	left := 0
-	right := len(a) - 1
-	temp := 0
+	right := len(a) -1
 
 	for left < right {
-		temp = a[left]
-		a[left] = a[right]
-		a[right] = temp
-
+		a[left], a[right] = a[right], a[left]
 		left++
 		right--
 	}
