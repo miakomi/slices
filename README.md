@@ -17,15 +17,22 @@ go get -u github.com/miakomi/slices
 go mod tidy
 ```
 
-### Reverse you slice 
-```go
-slice := []int{1,2,3}
-slice2 := slices.Reverse(slice)
-fmt.Println(slice2) //output [3 2 1]
-```
-or without return slice
+### Reverse you int slice 
 ```go 
 slice := []int{1, 2, 3}
 slices.ReverseSlice(slice)
 fmt.Println(slice) //output [3 2 1]
 ```
+or float slice.. 
+```go 
+arr := []float32{1.1, 2.2, 3.3}
+slices.Reverse(arr)
+fmt.Println(arr) //output [3.3, 2.2, 1.1]
+```
+or string slice.. 
+```go 
+arr := []string{"one", "two", "three"}
+slices.Reverse(arr)
+fmt.Println(arr) //output ["tree", "two", "one"]
+```
+as well as uint8/16/32/64, int32/64 and float32/64.
