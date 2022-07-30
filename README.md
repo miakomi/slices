@@ -3,7 +3,7 @@
 Slices tools is a module written in Golang that facilitates working with slices in Golang.
 
 ## Features:
-•Search a numbers in slice (support int and float32)
+•Search a numbers in slice (support int/uint and float32/64)
 
 •Reverse slices
 
@@ -19,21 +19,16 @@ go get -u github.com/miakomi/slices
 go mod tidy
 ```
 
-### Search the index of a numbers in a []int slice
-_use only the sorted slice (sort.Ints(slice) on package slice)_
+### Search the index of a numbers in a slice
+_use only the sorted slice)_
 ```go
-slice := []int{1, 3, 8, 16, 56}
-res := slices.SearchInt(slice, 56) //output Ok, i(index) = 4
-res = slices.SearchInt(slice, 58) // output NO
+slice := []float32{1.1, 2.2, 3.3, 4.4, 5.5}
+ok, i := slices.Search(slice, 4.4) //return true, 3(index of a number)
+//ok, i := slice.Search(slice. 15.4) //return false, -1
+if ok {
+	fmt.Println(slice[i]) //4.4
+}
 ```
-#### of float32
-```go
-slice := []float32{1.1, 3.5, 8.0, 16.5, 56.8}
-res := slices.SearchFloat32(slice, 56.8) //output Ok, i(index) = 4
-res = slices.SearchFloat32(slice, 56.7) // output NO
-```
-
-
 
 ### Reverse slice 
 ```go 
