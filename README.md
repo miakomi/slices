@@ -3,7 +3,7 @@
 Slices tools is a module written in Golang that facilitates working with slices in Golang.
 
 ## Features:
-•Search a numbers in a slice (support int/uint and float32/64)
+•Search in a slice
 
 •Reverse slices
 
