@@ -20,32 +20,41 @@ go mod tidy
 ```
 
 ### Search the index of a numbers in a slice
-_Recommended to use sorted slices because the search function in unsorted slices is slowly_
+_returns a slice with indexes of search values_
 ```go
 slice := []float32{1.1, 2.2, 3.3, 4.4, 5.5}
-ok, i := slices.Search(slice, 4.4) //return true, 3(index of a number)
-//ok, i := slice.Search(slice. 15.4) //return false, -1
+ok, i := slices.Search(slice, 4.4) //return true, [3]
+
 if ok {
-	fmt.Println(slice[i]) //4.4
+	fmt.Println(slice[i]) //[3]
+}
+```
+#### or string.. 
+```go 
+slice := []string{"Alex", "Jon", "Joshua", "Alex"}
+ok, i := slices.Search(slice, "Alex") //return true, [0, 3]
+  
+if ok {
+  fmt.Println(i) //[0, 3]
 }
 ```
 
 ### Reverse slice 
 ```go 
 slice := []int{1, 2, 3}
-slices.ReverseSlice(slice)
+slices.Reverse(slice)
 fmt.Println(slice) //output [3 2 1]
 ```
 
 #### or float slice.. 
 ```go 
-arr := []float32{1.1, 2.2, 3.3}
-slices.Reverse(arr)
-fmt.Println(arr) //output [3.3, 2.2, 1.1]
+slice := []float32{1.1, 2.2, 3.3}
+slices.Reverse(slice)
+fmt.Println(slice) //output [.3, 2.2, 1.1]
 ```
 #### or string slice.. 
 ```go 
 arr := []string{"one", "two", "three"}
-slices.Reverse(arr)
-fmt.Println(arr) //output ["tree", "two", "one"]
+slices.Reverse(slice)
+fmt.Println(slice) //output ["tree", "two", "one"]
 ```
