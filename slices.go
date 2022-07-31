@@ -13,6 +13,13 @@ type Numbers interface {
 }
 
 func Search[T Numbers](a []T, num T) (bool, int) {
+  for i := 0; i < len(a) - 1; i++ {
+    if a[i] > a[i+1] {
+      ok, j := SearchUnsorted(a, num)
+      return ok, j
+    }
+  }
+  
 	left := 0
 	right := len(a) - 1
 	mid := 0
@@ -29,4 +36,13 @@ func Search[T Numbers](a []T, num T) (bool, int) {
 		}
 	}
 	return false, -1
+}
+
+func SearchUnsorted[T Numbers](a []T, num T) (bool, int) {
+  for i := 0; i < len(a); i++ {
+    if a[i] == num {
+      return true, i
+    }
+  }
+  return false, -1
 }

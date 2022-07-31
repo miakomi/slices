@@ -20,7 +20,7 @@ go mod tidy
 ```
 
 ### Search the index of a numbers in a slice
-_use only the sorted slice_
+_Recommended to use sorted slices because the search function in unsorted slices is slowly_
 ```go
 slice := []float32{1.1, 2.2, 3.3, 4.4, 5.5}
 ok, i := slices.Search(slice, 4.4) //return true, 3(index of a number)
